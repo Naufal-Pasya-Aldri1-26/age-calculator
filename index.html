@@ -3,20 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Accordion Component</title>
+    <title>Age Calculator</title>
     <meta name="description" content="A  simple site to test NPM package.">
     <meta  name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="learning project, beginner">
     <meta name="author" content="Joseph Anderson">
     <meta property="og:title" content="age-calculator">
-    <meta property="og:description" content="a simple site to testing out how to let the user to input their birthdate, and the app calculates their ages then displaying them using NPM.">
+    <meta property="og:description" content="a simple site to calculate the user ages then displaying them using NPM.">
     <meta property="og:url" content="https://github.com/Naufal-Pasya-Aldri1-26/age-calculator#">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
+    <div class="card">
+        <p class="eyebrow">Find out</p>
+        <h1>Age Calculator</h1>
 
-    <p>hello world</p>
+        <label for="date-input">Your birth date</label>
+        <input type="date" id="date-input" min="1926-12-29" max="2026-03-16">
+        <button id="date-btn">Get Date</button>
 
-    <script src="scripts/main.js"></script>
+        <hr class="divider">
+        <div id="output"></div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "luxon": "https://cdn.jsdelivr.net/npm/luxon@3/src/luxon.js"
+            }
+        }
+    </script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
